@@ -1,0 +1,35 @@
+:root {
+  // COLORS
+  --color-black: #000;
+  --color-white: #fff;
+  --color-gray: #909090;
+  --color-black-brown: #232323;
+  --color-mandarin-tango: #e55047;
+  --color-white-aluminum: #a5a5a5;
+  --color-gainsborough: #dbdbdb;
+  --color-smoky-white: #f9f9f9;
+}
+// BREAKPOINTS
+$xl: 1182px;
+$lg: 992px;
+$md: 768.9px;
+$sm: 480px;
+
+/* Large desktops and laptops */
+// @media (min-width: 1200px) {
+// /* Landscape tablets and medium desktops */
+// @media (min-width: 992px) and (max-width: 1199px) {
+// /* Portrait tablets and small desktops */
+// @media (min-width: 768px) and (max-width: 991px) {
+// /* Landscape phones and portrait tablets */
+// @media (max-width: 767px) {
+// /* Portrait phones and smaller */
+// @media (max-width: 480px) {
+// /* Iphone 5 */
+// @media (max-width: 320px) {
+
+// 320px — 480px: Mobile devices.
+// 481px — 768px: iPads, Tablets.
+// 769px — 1024px: Small screens, laptops.
+// 1025px — 1200px: Desktops, large screens.
+// 1201px and more — Extra large screens, TV.
