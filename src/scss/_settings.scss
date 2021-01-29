@@ -69,8 +69,18 @@ body {
   @include visually-hidden;
 }
 
-// .btn--reset {
-//   border: none;
-//   background: transparent;
-//   cursor: pointer;
-// }
+._btn-reset {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0.1;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
