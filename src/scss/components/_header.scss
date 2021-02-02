@@ -1,12 +1,32 @@
 .header {
   position: relative;
-  z-index: 10;
+  z-index: 30;
   box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.5);
 
   &__top {
     height: 47px;
     background-color: var(--color-black-brown);
     background-image: url(../img/top-bar.jpg);
+
+    @media (max-width: $sm) {
+      display: none;
+      height: 40px;
+    }
+
+    &._active {
+      display: block;
+      position: fixed;
+      left: 0;
+      right: 0;
+      background-image: none;
+      background-color: transparent;
+      z-index: 20;
+    }
+
+    &._active .header__top-container {
+      justify-content: center;
+      margin-top: 7px;
+    }
   }
 
   &__top-container {
@@ -19,33 +39,42 @@
   &__social-inner {
     display: flex;
     gap: 8px;
+
+    @media (max-width: $sm) {
+      gap: 13px;
+    }
   }
 
   &__social-icon {
-    fill: #fff;
+    fill: var(--color-white);
     transition: fill 0.2s;
   }
 
   &__social-link {
-    display: block;
     width: 25.5px;
     height: 47px;
     line-height: 51px;
     text-align: center;
 
-    &:hover .header__social-icon {
-      fill: var(--color-mandarin-tango);
+    @media (hover: hover) {
+      &:hover .header__social-icon {
+        fill: var(--color-mandarin-tango);
+      }
     }
   }
 
   &__bottom {
-    background-color: #fff;
+    background-color: var(--color-white);
   }
 
   &__bottom-container {
+    height: 56px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @media (max-width: $sm) {
+      height: 45px
+    }
   }
 
   &__logo {
@@ -55,6 +84,10 @@
     font-weight: 500;
     line-height: 56px;
     cursor: pointer;
+
+    @media (max-width: $sm) {
+      line-height: auto;
+    }
   }
 
   &__logo-text {
@@ -72,7 +105,6 @@
   &__logo-dot {
     color: var(--color-mandarin-tango);
   }
-
 }
 
 .menu-header {
@@ -130,11 +162,10 @@
         }
 
         @media (max-width: $sm) {
-          background-color: var(--color-black-brown);
+          background-color: var(--color-smoky-white);
         }
       }
     }
-
   }
 }
 
@@ -162,8 +193,47 @@
       color: var(--color-mandarin-tango);
     }
 
-    &:hover {
-      opacity: 0.6;
+    @media (hover: hover) {
+      &:hover {
+        opacity: 0.6;
+      }
     }
+  }
+
+  &._active {
+    @media (max-width: $md) {
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      padding-top: 80px;
+      background-color: rgba(0, 0, 0, 0.9);
+      transition: top 0.3s ease 0s;
+    }
+
+    @media (max-width: $sm) {
+      padding-top: 37px;
+    }
+  }
+
+  &._active .nav__list {
+    margin-top: 27px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &._active .nav__link {
+    line-height: 47px;
+    color: var(--color-smoky-white);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+  }
+
+  &._active .nav__link--active {
+    color: var(--color-mandarin-tango);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
   }
 }

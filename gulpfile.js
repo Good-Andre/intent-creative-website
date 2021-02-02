@@ -23,11 +23,24 @@ const imageminWebp = require('imagemin-webp');
 const htmlmin = require('gulp-htmlmin');
 const groupMedia = require('gulp-group-css-media-queries');
 
-const imgToApp = () => {
-  return src(['./src/img/**/*.{svg,jpg,JPG,jpeg,png,svg,gif,ico,webp,tiff}'])
-    .pipe(dest('./app/img'))
+const resources = () => {
+  return src('./src/resources/**')
+    .pipe(dest('./app/resources'))
     .pipe(browserSync.stream());
 }
+
+const imgToApp = () => {
+  return src(['./src/img/**/*.{svg,jpg,JPG,jpeg,png,gif,ico,tiff}'])
+    .pipe(dest('./app/img'))
+    .pipe(browserSync.stream());
+};
+
+const webpToApp = () => {
+  return src(['./src/img/webp/*.{jpg,JPG,jpeg,png,webp}'])
+    .pipe(webp())
+    .pipe(dest('./app/img/webp'))
+    .pipe(browserSync.stream());
+};
 
 const htmlInclude = () => {
   return src(['./src/*.html'])
@@ -45,6 +58,7 @@ const htmlInclude = () => {
     )
     .pipe(dest(source_folder + '/fonts/'));
 }
+
 const fonts = () => {
   return src('./src/fonts/**.ttf')
     .pipe(ttf2woff2())
@@ -121,6 +135,7 @@ const fontsStyle = (done) => {
   })
   done();
 }
+
 const styles = () => {
   return src('./src/scss/**/*.scss')
     .pipe(sourcemaps.init())
@@ -187,7 +202,9 @@ const watchFiles = () => {
   watch('./src/js/**/*.js', scripts);
   watch('./src/html/*.html', htmlInclude);
   watch('./src/*.html', htmlInclude);
-  watch('./src/img/**/*.{svg,jpg,JPG,jpeg,png,gif,ico,webp,tiff}', imgToApp);
+  watch('./src/resources/**', resources);
+  watch('./src/img/**/*.{svg,jpg,JPG,jpeg,png,gif,ico,tiff}', imgToApp);
+  watch('./src/img/**/*.{jpg,JPG,jpeg,png,webp}', webpToApp);
   watch('./src/fonts/**', fonts);
 }
 
@@ -204,10 +221,54 @@ exports.fontsStyle = fontsStyle;
 
 exports.default = series(
   clean,
-  parallel(htmlInclude, scripts, fonts, imgToApp), styles, watchFiles);
+  parallel(htmlInclude, scripts, fonts, 
+    resources, 
+    imgToApp, 
+    webpToApp
+    ),
+  styles,
+  watchFiles
+);
 
 const imgToBuild = () => {
-  return src(['./src/img/webp/**.{svg,jpg,JPG,jpeg,png,gif,ico,webp,tiff}'])
+  return src(['./src/img/**.{svg,jpg,JPG,jpeg,png,gif,ico,tiff}'])
+    .pipe(
+      imagemin([
+        imageminGiflossy({
+          optimizationLevel: 3,
+          optimize: 3,
+          lossy: 2,
+        }),
+        imageminPngquant({
+          speed: 8,
+          quality: [0.7, 0.9],
+        }),
+        imageminZopfli({
+          more: true,
+        }),
+        imageminMozjpeg({
+          progressive: true,
+          quality: 90,
+        }),
+        imagemin.svgo({
+          plugins: [
+            { removeViewBox: false },
+            { removeUnusedNS: false },
+            { removeUselessStrokeAndFill: false },
+            { cleanupIDs: false },
+            { removeComments: true },
+            { removeEmptyAttrs: true },
+            { removeEmptyText: true },
+            { collapseGroups: true },
+          ],
+        }),
+      ])
+    )
+    .pipe(dest('./app/img'));
+};
+
+const webpToBuild = () => {
+  return src(['./src/img/webp/**.{jpg,JPG,jpeg,png,webp}'])
   .pipe(
     webp(
       imageminWebp({
@@ -218,40 +279,6 @@ const imgToBuild = () => {
     )
   )
   .pipe(dest('./app/img/webp'))
-  .pipe(src(['./src/img/**.{svg,jpg,JPG,jpeg,png,gif,ico,webp,tiff}']))
-  .pipe(
-    imagemin([
-      imageminGiflossy({
-        optimizationLevel: 3,
-        optimize: 3,
-        lossy: 2,
-      }),
-      imageminPngquant({
-        speed: 8,
-        quality: [0.7, 0.9],
-      }),
-      imageminZopfli({
-        more: true,
-      }),
-      imageminMozjpeg({
-        progressive: true,
-        quality: 90,
-      }),
-      imagemin.svgo({
-        plugins: [
-          { removeViewBox: false },
-          { removeUnusedNS: false },
-          { removeUselessStrokeAndFill: false },
-          { cleanupIDs: false },
-          { removeComments: true },
-          { removeEmptyAttrs: true },
-          { removeEmptyText: true },
-          { collapseGroups: true },
-        ],
-      }),
-    ])
-  )
-    .pipe(dest('./app/img'))
 }
 
 const stylesBuild = () => {
@@ -300,6 +327,26 @@ const scriptsBuild = () => {
     .pipe(dest('./app/js'))
 }
 
+const cache = () => {
+  return src('app/**/*.{css,js,svg,png,jpg,jpeg,woff2}', {
+    base: 'app'})
+    .pipe(rev())
+    .pipe(revdel())
+    .pipe(dest('app'))
+    .pipe(rev.manifest('rev.json'))
+    .pipe(dest('app'));
+};
+
+const rewrite = () => {
+  const manifest = src('app/rev.json');
+
+  return src('app/**/*.html')
+    .pipe(revRewrite({
+      manifest
+    }))
+    .pipe(dest('app'));
+}
+
 const htmlMinify = () => {
 	return src('app/**/*.html')
 		.pipe(htmlmin({
@@ -308,6 +355,14 @@ const htmlMinify = () => {
 		.pipe(dest('app'));
 }
 
+exports.cache = series(cache, rewrite);
 exports.imgToBuild = imgToBuild;
 
-exports.build = series(clean, parallel(htmlInclude, scriptsBuild, fonts, imgToApp), stylesBuild, htmlMinify, imgToBuild);
+exports.build = series(clean, parallel(htmlInclude, scriptsBuild, fonts,
+   resources,
+   imgToApp, 
+   webpToApp),
+  htmlMinify,
+  imgToBuild,
+  webpToBuild
+);

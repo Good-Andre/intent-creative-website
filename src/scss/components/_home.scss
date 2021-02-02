@@ -1,0 +1,323 @@
+.home {
+  &__slider {
+    height: calc(100vh - 103px);
+    overflow: hidden;
+
+    @media (max-width: $md) {
+      // height: calc(100vh - 49px);
+      height: calc(100vh - 103px);
+    }
+
+    @media (max-width: $sm) {
+      height: calc(100vh - 45px);
+    }
+  }
+
+  &__slide {
+    position: relative;
+    width: 100%;
+    background-color: var(--color-white-aluminum);
+    background-position: center;
+    background-size: cover;
+  }
+
+  &__slide-1 {
+    background-image: url(../img/webp/slide-1.webp);
+  }
+
+  &__slide-2 {
+    background-image: url(../img/webp/slide-2.webp);
+  }
+
+  &__slide-3 {
+    background-image: url(../img/webp/slide-3.webp);
+  }
+
+  &__slide-4 {
+    background-image: url(../img/webp/slide-4.webp);
+  }
+
+  &__slide-5 {
+    background-image: url(../img/webp/slide-5.webp);
+  }
+
+  &__slide-6 {
+    background-image: url(../img/webp/slide-6.webp);
+  }
+
+  &__slide-7 {
+    background-image: url(../img/webp/slide-7.webp);
+  }
+
+  &__slide-8 {
+    background-image: url(../img/webp/slide-8.webp);
+  }
+
+  &__slide-9 {
+    background-image: url(../img/webp/slide-9.webp);
+  }
+
+  &__slide-10 {
+    background-image: url(../img/webp/slide-10.webp);
+  }
+
+  &__slide-inner {
+    position: relative;
+    top: 19%;
+    left: 20px;
+    padding: 0;
+  }
+
+  &__slide-title,
+  &__slide-desc {
+    display: inline-block;
+    padding: 8px 15px;
+    margin: 1px;
+    font-family: 'Bitter', serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--color-white);
+    background-color: rgba(0, 0, 0, 0.8);
+
+    @media (max-width: $xl) {
+      font-size: 24px;
+    }
+
+    @media (max-width: $sm) {
+      font-size: 19px;
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+  }
+
+  &__slide-btn--inner {
+    position: absolute;
+    top: 19%;
+    z-index: 11;
+    width: 100%;
+    margin-top: 260px;
+
+    @media (max-width: $xl) {
+      margin-top: 233px;
+    }
+
+    @media (max-width: $md) {
+      margin-top: 233px;
+    }
+
+    @media (max-width: $sm) {
+      margin-top: 177px;
+    }
+  }
+
+  &__slide-btn {
+    padding: 14px 17px 10px;
+    margin-right: 1px;
+    background-color: var(--color-mandarin-tango);
+    transition: opacity 0.3s;
+
+    @media (max-width: $xl) {
+      padding: 9px 12px 5px;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+
+  &__slider-thumbs {
+    position: relative;
+    z-index: 12;
+    max-width: 940px;
+    height: 130px;
+    margin-top: -130px; //
+    background-color: rgba(0, 0, 0, 0.2);
+    background-image: none; //
+    transition: margin-top 0.3s;
+
+    @media (max-width: $md) {
+      display: none;
+    }
+  }
+
+  &__thumbs-wrapper {
+    align-items: center;
+    justify-content: space-between;
+    cursor: default;
+  }
+
+  &__thumb {
+    box-sizing: border-box;
+    max-width: 75px;
+    height: 75px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.6;
+    transition: opacity 0.3s;
+
+    @media (max-width: $sm) {
+      height: 40px;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &:nth-child(1) {
+      background-image: url(../img/webp/slide-sm-1.webp);
+    }
+
+    &:nth-child(2) {
+      background-image: url(../img/webp/slide-sm-2.webp);
+    }
+
+    &:nth-child(3) {
+      background-image: url(../img/webp/slide-sm-3.webp);
+    }
+
+    &:nth-child(4) {
+      background-image: url(../img/webp/slide-sm-4.webp);
+    }
+
+    &:nth-child(5) {
+      background-image: url(../img/webp/slide-sm-5.webp);
+    }
+
+    &:nth-child(6) {
+      background-image: url(../img/webp/slide-sm-6.webp);
+    }
+
+    &:nth-child(7) {
+      background-image: url(../img/webp/slide-sm-7.webp);
+    }
+
+    &:nth-child(8) {
+      background-image: url(../img/webp/slide-sm-8.webp);
+    }
+
+    &:nth-child(9) {
+      background-image: url(../img/webp/slide-sm-9.webp);
+    }
+
+    &:nth-child(10) {
+      background-image: url(../img/webp/slide-sm-10.webp);
+    }
+
+    &.swiper-slide-thumb-active {
+      border: 2px solid var(--color-mandarin-tango);
+      opacity: 1;
+    }
+  }
+
+  &__slider-pags-inner {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin-bottom: 20px;
+
+    @media (min-width: $md) {
+      display: block;
+    }
+  }
+
+  &__slider-pagination {
+    z-index: 10;
+    display: flex;
+    gap: 10px;
+
+    & .swiper-pagination-bullet {
+      width: 15px;
+      height: 15px;
+    }
+  }
+}
+
+.features {
+  display: flex;
+  gap: 39px;
+  padding-top: 17px;
+
+  @media (max-width: $md) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  @media (max-width: $sm) {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  &__col {
+    width: 33%;
+
+    @media (max-width: $md) {
+      width: 100%;
+      max-width: 500px;
+    }
+  }
+
+  &__icon {
+    display: inline-block;
+    width: 31px;
+    height: 31px;
+    margin-right: 13px;
+    line-height: 31px;
+    text-align: center;
+    background-color: var(--color-black-brown);
+
+    img {
+      vertical-align: middle;
+    }
+  }
+
+  &__title {
+    display: inline-block;
+    font-family: 'Bitter', serif;
+    font-size: 18px;
+    font-weight: 500;
+    vertical-align: middle;
+  }
+
+  &__text {
+    margin-top: 17px;
+    line-height: 17px;
+    color: var(--color-wet-asphalt);
+  }
+
+  &__bottom {
+    padding-bottom: 8px;
+    padding-bottom: 36px;
+    margin-top: 55px;
+    margin-bottom: 19px;
+    font-family: 'Bitter', serif;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+
+    span {
+      padding: 8px 13px;
+      margin: 0 6px;
+      font-weight: 700;
+      color: #fff;
+      background-color: var(--color-mandarin-tango);
+
+      @media (max-width: $md) {
+        font-weight: 500;
+        color: var(--color-mandarin-tango);
+        background-color: transparent;
+      }
+    }
+
+    @media (max-width: $sm) {
+      font-size: 16px;
+    }
+  }
+}
