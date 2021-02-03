@@ -36,18 +36,16 @@
     &:hover {
       opacity: 0.6;
     }
-
   }
 
   &__list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
-    min-height: 264px;
+    overflow: hidden;
 
     @media (max-width: $lg) {
       grid-template-columns: repeat(3, 1fr);
-      min-height: 360px;
     }
 
     @media (max-width: $md) {
@@ -58,7 +56,6 @@
       display: flex;
       flex-direction: column;
       gap: 2px; //
-      min-height: 342px;
     }
   }
 
@@ -83,7 +80,6 @@
         transform: translateY(-30px);
       }
     }
-
   }
 
   &__img {
@@ -111,11 +107,6 @@
 
   &__hide-work {
     display: none;
-  }
-
-  &__fade-in {
-    animation-name: fade-in;
-    animation-duration: 0.5s;
   }
 
   &__btn--active {

@@ -1,5 +1,121 @@
 <div class="home">
   <h1 class="visually-hidden">Intent - Creative Website</h1>
+  <div class="home__slider">
+    <div class="swiper-wrapper">
+
+      <div class="home__slide home__slide-1 swiper-slide">
+        <div class="home__slide-inner _container">
+          <h2 class="home__slide-title">Place Your Description Text</h2><br />
+          <p class="home__slide-desc">Here. Great Spot to Tell</p><br />
+          <p class="home__slide-desc">About Deals.</p><br />
+        </div>
+      </div>
+
+      <div class="home__slide home__slide-2 swiper-slide">
+        <div class="home__slide-inner _container">
+          <h2 class="home__slide-title">Here. Great Spot to Tell</h2><br />
+          <p class="home__slide-desc">Place Your Description Text</p><br />
+          <p class="home__slide-desc">About Deals.</p><br />
+        </div>
+      </div>
+
+      <div class="home__slide home__slide-3 swiper-slide">
+        <div class="home__slide-inner _container">
+          <h2 class="home__slide-title">About Deals.</h2><br />
+          <p class="home__slide-desc">Here. Great Spot to Tell</p><br />
+          <p class="home__slide-desc">Place Your Description Text</p><br />
+        </div>
+      </div>
+
+      <div class="home__slide home__slide-4 swiper-slide">
+        <div class="home__slide-inner _container">
+          <h2 class="home__slide-title">About Deals.</h2><br />
+          <p class="home__slide-desc">Here. Great Spot to Tell</p><br />
+          <p class="home__slide-desc">Place Your Description Text</p><br />
+        </div>
+      </div>
+
+      <div class="home__slide home__slide-5 swiper-slide">
+        <div class="home__slide-inner _container">
+          <h2 class="home__slide-title">About Deals.</h2><br />
+          <p class="home__slide-desc">Here. Great Spot to Tell</p><br />
+          <p class="home__slide-desc">Place Your Description Text</p><br />
+        </div>
+      </div>
+
+      <div class="home__slide home__slide-6 swiper-slide">
+        <div class="home__slide-inner _container">
+          <h2 class="home__slide-title">About Deals.</h2><br />
+          <p class="home__slide-desc">Here. Great Spot to Tell</p><br />
+          <p class="home__slide-desc">Place Your Description Text</p><br />
+        </div>
+      </div>
+
+      <div class="home__slide home__slide-7 swiper-slide">
+        <div class="home__slide-inner _container">
+          <h2 class="home__slide-title">About Deals.</h2><br />
+          <p class="home__slide-desc">Here. Great Spot to Tell</p><br />
+          <p class="home__slide-desc">Place Your Description Text</p><br />
+        </div>
+      </div>
+
+      <div class="home__slide home__slide-8 swiper-slide">
+        <div class="home__slide-inner _container">
+          <h2 class="home__slide-title">About Deals.</h2><br />
+          <p class="home__slide-desc">Here. Great Spot to Tell</p><br />
+          <p class="home__slide-desc">Place Your Description Text</p><br />
+        </div>
+      </div>
+
+      <div class="home__slide home__slide-9 swiper-slide">
+        <div class="home__slide-inner _container">
+          <h2 class="home__slide-title">About Deals.</h2><br />
+          <p class="home__slide-desc">Here. Great Spot to Tell</p><br />
+          <p class="home__slide-desc">Place Your Description Text</p><br />
+        </div>
+      </div>
+
+      <div class="home__slide home__slide-10 swiper-slide">
+        <div class="home__slide-inner _container">
+          <h2 class="home__slide-title">About Deals.</h2><br />
+          <p class="home__slide-desc">Here. Great Spot to Tell</p><br />
+          <p class="home__slide-desc">Place Your Description Text</p><br />
+        </div>
+      </div>
+    </div>
+
+    <div class="home__slide-btn--inner">
+      <div class="home__slide-btns _container">
+        <button class="home__slide-btn home__slide-prev">
+          <img src="img/icons/prev-arrow.svg" alt="icon: prev-arrow">
+        </button>
+        <button class="home__slide-btn home__slide-next">
+          <img src="img/icons/next-arrow.svg" alt="icon: next-arrow">
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="home__slider-thumbs _container">
+    <div class="swiper-wrapper home__thumbs-wrapper">
+      <div class="swiper-slide home__thumb"></div>
+      <div class="swiper-slide home__thumb"></div>
+      <div class="swiper-slide home__thumb"></div>
+      <div class="swiper-slide home__thumb"></div>
+      <div class="swiper-slide home__thumb"></div>
+      <div class="swiper-slide home__thumb"></div>
+      <div class="swiper-slide home__thumb"></div>
+      <div class="swiper-slide home__thumb"></div>
+      <div class="swiper-slide home__thumb"></div>
+      <div class="swiper-slide home__thumb""></div>
+    </div>
+  </div>
+
+  <div class="home__slider-pags-inner">
+    <div class="home__slider-pagination"></div>
+  </div>
+  
 
   <div class="_layout _container">
     
@@ -50,71 +166,72 @@
         </li>
         <li>
           <button class="projects__btn _btn-reset" aria-label="Show Print projects"
-            data-filter="print">Print</button>
+            data-filter=".print">Print</button>
         </li>
         <li>
           <button class="projects__btn _btn-reset" aria-label="Show Photo projects"
-            data-filter="photo">Photography</button>
+            data-filter=".photo">Photography</button>
         </li>
         <li>
-          <button class="projects__btn _btn-reset" aria-label="Show Web projects" data-filter="web">Web</button>
+          <button class="projects__btn _btn-reset" aria-label="Show Web projects" data-filter=".web">Web</button>
         </li>
         <li>
           <button class="projects__btn _btn-reset" aria-label="Show Animation projects"
-            data-filter="animation">Animation</button>
+            data-filter=".animation">Animation</button>
         </li>
       </ul>
+
       <ul class="projects__list">
-        <li class="projects__item" data-cat="print">
+        <li class="projects__item mix print" data-order="1">
           <picture>
             <source srcset="img/webp/portfolio-sm-1.webp" type="image/webp">
             <img src="img/webp/portfolio-sm-1.jpg" alt="image Donuts" class="projects__img">
           </picture>
           <p class="projects__overlay">Donuts</p>
         </li>
-        <li class="projects__item" data-cat="print">
+        <li class="projects__item mix print" data-order="1">
           <picture>
             <source srcset="img/webp/portfolio-sm-2.webp" type="image/webp">
             <img src="img/webp/portfolio-sm-2.jpg" alt="image Dandelion" class="projects__img">
           </picture>
           <p class="projects__overlay">Dandelion</p>
         </li>
-        <li class="projects__item" data-cat="web">
+        <li class="projects__item mix web" data-order="3">
           <picture>
             <source srcset="img/webp/portfolio-sm-3.webp" type="image/webp">
             <img src="img/webp/portfolio-sm-3.jpg" alt="image Volcano" class="projects__img">
           </picture>
           <p class="projects__overlay">Volcano</p>
         </li>
-        <li class="projects__item" data-cat="print">
+        <li class="projects__item mix print" data-order="1">
           <picture>
             <source srcset="img/webp/portfolio-sm-4.webp" type="image/webp">
             <img src="img/webp/portfolio-sm-4.jpg" alt="image Zebra" class="projects__img">
           </picture>
           <p class="projects__overlay">Zebra</p>
         </li>
-        <li class="projects__item" data-cat="animation">
+        <li class="projects__item mix animation" data-order="4">
           <picture>
             <source srcset="img/webp/portfolio-sm-5.webp" type="image/webp">
             <img src="img/webp/portfolio-sm-5.jpg" alt="image Cat" class="projects__img">
           </picture>
           <p class="projects__overlay">Cat</p>
         </li>
-        <li class="projects__item" data-cat="photo">
+        <li class="projects__item mix photo" data-order="2">
           <picture>
             <source srcset="img/webp/portfolio-sm-6.webp" type="image/webp">
             <img src="img/webp/portfolio-sm-6.jpg" alt="image Flowers" class="projects__img">
           </picture>
           <p class="projects__overlay">Flowers</p>
         </li>
-        <li class="projects__item" data-cat="animation">
+        <li class="projects__item mix animation" data-order="4">
           <picture>
             <source srcset="img/webp/portfolio-sm-7.webp" type="image/webp">
             <img src="img/webp/portfolio-sm-7.jpg" alt="image Polar bear" class="projects__img">
           </picture>
           <p class="projects__overlay">Polar bear</p>
         </li>
-        <li class="projects__item" data-cat="web">
+        <li class="projects__item mix web" data-order="3">
           <picture>
             <source srcset="img/webp/portfolio-sm-8.webp" type="image/webp">
             <img src="img/webp/portfolio-sm-8.jpg" alt="image Moon way" class="projects__img">

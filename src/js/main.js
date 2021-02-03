@@ -1,4 +1,3 @@
-// import './_vars';
 const navLink = document.querySelectorAll('.nav__link');
 
 if (document.location.pathname === '/index.html' || document.location.pathname === '/') {
@@ -29,5 +28,5 @@ if (document.location.pathname === '/index.html' || document.location.pathname =
   })
 };
 
-// import './components/main-slider';
+import './components/main-slider';
 import './components/portfolio-filter';
