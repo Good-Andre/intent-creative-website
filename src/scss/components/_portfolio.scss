@@ -1,9 +1,18 @@
-.projects {
-  padding: 0 0 27px 0;
-
-  @media (max-width: $sm) {
-    padding-bottom: 0;
+.portfolio {
+  &__layout._layout {
+    @media (max-width: $sm) {
+      padding-bottom: 0;
+    }
   }
+}
+
+.projects {
+  // padding: 0 0 27px 0;
+  padding: 0;
+
+  // @media (max-width: $sm) {
+  //   padding-bottom: 0;
+  // }
 
   &__filter {
     display: flex;

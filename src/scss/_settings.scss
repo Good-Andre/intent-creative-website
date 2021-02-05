@@ -53,9 +53,19 @@ img {
   vertical-align: top;
 }
 
+// html {
+//   width: 100%;
+// }
+
 body {
   width: 100%;
   font-family: 'Roboto', sans-serif;
+  letter-spacing: 0.5px;
+  // font-weight: 400;
+  // font-size: 1rem;
+  // line-height: 21px;
+  // background-color: #f9f9f9;
+  // position: relative;
   background-color: var(--color-smoky-white);
 }
 
@@ -68,6 +78,7 @@ body {
 ._top-bg {
   height: 151px;
   background-color: var(--color-white-aluminum);
+  background-image: url(../img/geometric-leaves2.png);
   background-position: center;
 
   @media (max-width: $lg) {
@@ -95,7 +106,6 @@ body {
     align-items: center;
     height: 70px;
     margin-top: 0;
-
   }
 
   @media (max-width: $sm) {
@@ -107,15 +117,15 @@ body {
   position: relative;
   z-index: 10;
   max-width: 940px;
-  padding: 31px 27px 0;
+  padding: 31px 27px 27px;
   margin-bottom: -31px;
   background-color: var(--color-white);
   border: 1px solid var(--color-gainsborough);
   border-bottom: none;
 
   @media (max-width: $md) {
-    padding-left: 15px;
     padding-right: 15px;
+    padding-left: 15px;
   }
 
   @media (max-width: $sm) {
@@ -149,6 +159,10 @@ body {
 ._layout-text {
   font-size: 14px;
   color: var(--color-gainsborough);
+
+  @media (max-width: $sm) {
+    // font-size: 15px;
+  }
 }
 
 .visually-hidden {
@@ -160,3 +174,98 @@ body {
   background: transparent;
   border: none;
 }
+
+// @keyframes fade-in {
+//   from {
+//     opacity: 0.1;
+//   }
+
+//   to {
+//     opacity: 1;
+//   }
+// }
+
+// .wrapper {
+// position: relative;
+// display: flex;
+// flex-direction: column;
+// width: 100%;
+// min-height: 100vh;
+// overflow: hidden;
+
+// }
+
+// img {
+//   max-width: 100%;
+// }
+
+// .is-outer {
+//   position: relative !important; // stylelint-disable-line declaration-no-important
+//   left: -9999px !important; // stylelint-disable-line declaration-no-important
+// }
+
+// .site-container {
+//   overflow: hidden;
+// }
+
+// .stop-scroll {
+//   @include stop-scroll;
+// }
+
+// .is-hidden {
+//   display: none !important; // stylelint-disable-line declaration-no-important
+// }
+
+// .for-mobile {
+//   display: none;
+
+//   @include mobile {
+//     display: block;
+//   }
+// }
+
+// .error {
+//   border: 2px #ff4019 solid !important; // stylelint-disable-line declaration-no-important
+// }
+
+// .js-focus-visible :focus:not(.focus-visible) {
+//   outline: none;
+// }
+// ---------------
+// CUSTOM COMPONENTS STYLES
+// .burger {
+//   --burger-width: 40px;
+//   --burger-height: 20px;
+//   --burger-line-height: 2px;
+
+//   @include burger;
+// }
+// ---------------------
+
+// html{
+//   scroll-behavior: smooth;
+//   // height: 100%;
+// }
+
+// html{
+//   height: 100%;
+//   width: 100%;
+// }
+
+// .wrapper {
+//   display: flex;
+//   flex-direction: column;
+//   min-height: 100vh;
+//   // width: 100%;
+//   position: relative;
+// }
+
+// .noscript-info {
+//   z-index: 100;
+//   width: 100%;
+//   padding: 25px;
+//   font-size: 28px;
+//   line-height: 36px;
+//   text-align: center;
+//   background-color: #fff;
+// }
