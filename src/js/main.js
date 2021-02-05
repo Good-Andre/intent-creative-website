@@ -1,28 +1,29 @@
 const navLink = document.querySelectorAll('.nav__link');
+const gitUrl = "/intent-creative-website/app";
 
-if (document.location.pathname === '/index.html' || document.location.pathname === '/') {
+if (document.location.pathname === gitUrl + '/index.html' || document.location.pathname === gitUrl + '/') {
   navLink.forEach(item =>{
-    if (item.pathname === '/index.html' || item.pathname === '/') {
+    if (item.pathname === gitUrl + '/index.html' || item.pathname === gitUrl + '/') {
       item.classList.add('nav__link--active');
     }
   })
-} else if (document.location.pathname === '/blog.html') {
+} else if (document.location.pathname === gitUrl + '/blog.html') {
   navLink.forEach(item =>{
-    if (item.pathname === '/blog.html') {
+    if (item.pathname === gitUrl + '/blog.html') {
       item.classList.add('nav__link--active');
     }
   })
-} else if (document.location.pathname === '/portfolio.html') {
+} else if (document.location.pathname === gitUrl + '/portfolio.html') {
   navLink.forEach(item =>{
-    if (item.pathname === '/portfolio.html') {
+    if (item.pathname === gitUrl + '/portfolio.html') {
       item.classList.add('nav__link--active');
     }
   })
 
-} else if (document.location.pathname === '/contact.html') {
+} else if (document.location.pathname === gitUrl + '/contact.html') {
   navLink.forEach(item =>{
     console.log(item.pathname);
-    if (item.pathname === '/contact.html') {
+    if (item.pathname === gitUrl + '/contact.html') {
       item.classList.add('nav__link--active');
     }
   })
