@@ -5,9 +5,12 @@
 
 <body>
 
-  @@include('html/_header.html')
-  <!-- @@include('html/_main-contact.html') -->
+  @@include('html/_header.html', {
+    "nav-links": "@@include('_contact-header.html')"
+  })
+  <!-- @@include('html/_contact.html') -->
   @@include('html/_footer.html')
+  @@include('html/_btn-up.html')
 
 </body>
 

@@ -53,19 +53,12 @@ img {
   vertical-align: top;
 }
 
-// html {
-//   width: 100%;
-// }
-
 body {
   width: 100%;
   font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  color: var(--color-black-brown);
   letter-spacing: 0.5px;
-  // font-weight: 400;
-  // font-size: 1rem;
-  // line-height: 21px;
-  // background-color: #f9f9f9;
-  // position: relative;
   background-color: var(--color-smoky-white);
 }
 
@@ -77,9 +70,7 @@ body {
 
 ._top-bg {
   height: 151px;
-  background-color: var(--color-white-aluminum);
-  background-image: url(../img/geometric-leaves2.png);
-  background-position: center;
+  background: var(--color-white-aluminum) url(../img/geometric-leaves2.png) center;
 
   @media (max-width: $lg) {
     height: 80px;
@@ -109,7 +100,8 @@ body {
   }
 
   @media (max-width: $sm) {
-    height: 47px;
+    height: 100px;
+    padding-top: 56px;
   }
 }
 
@@ -124,14 +116,11 @@ body {
   border-bottom: none;
 
   @media (max-width: $md) {
-    padding-right: 15px;
-    padding-left: 15px;
+    padding: 31px 15px 27px;
   }
 
   @media (max-width: $sm) {
-    padding-top: 25px;
-    padding-right: 0;
-    padding-left: 0;
+    padding: 25px 0 27px;
     margin-bottom: 0;
   }
 }
@@ -144,7 +133,7 @@ body {
 
 ._layout-title {
   margin-bottom: 5px;
-  font-size: 30px;
+  font-size: 2.14rem;
   color: var(--color-white);
 
   @media (max-width: $md) {
@@ -152,17 +141,12 @@ body {
   }
 
   @media (max-width: $sm) {
-    font-size: 20px;
+    font-size: 1.43rem;
   }
 }
 
 ._layout-text {
-  font-size: 14px;
   color: var(--color-gainsborough);
-
-  @media (max-width: $sm) {
-    // font-size: 15px;
-  }
 }
 
 .visually-hidden {
@@ -175,97 +159,42 @@ body {
   border: none;
 }
 
-// @keyframes fade-in {
-//   from {
-//     opacity: 0.1;
-//   }
+.up-btn {
+  z-index: 15;
+  display: none;
+  padding: 12px 15px 8px;
+  background-color: rgba(219, 219, 219, 0.5);
+  transition: opacity, background-color 0.3s;
 
-//   to {
-//     opacity: 1;
-//   }
-// }
+  @media (hover: hover) {
+    &:hover {
+      background-color: var(--color-mandarin-tango);
+    }
 
-// .wrapper {
-// position: relative;
-// display: flex;
-// flex-direction: column;
-// width: 100%;
-// min-height: 100vh;
-// overflow: hidden;
+    &:hover .up-btn__icon {
+      fill: var(--color-white);
+    }
+  }
 
-// }
+  &__icon {
+    fill: var(--color-gray-brown);
+    transition: fill 0.3s;
+    transform: rotate(90deg);
+  }
 
-// img {
-//   max-width: 100%;
-// }
+  @media (min-width: $sm) {
+    position: fixed;
+    top: 35%;
+    right: 22px;
+  }
+}
 
-// .is-outer {
-//   position: relative !important; // stylelint-disable-line declaration-no-important
-//   left: -9999px !important; // stylelint-disable-line declaration-no-important
-// }
+._hover {
+  transition: opacity 0.2s;
 
-// .site-container {
-//   overflow: hidden;
-// }
-
-// .stop-scroll {
-//   @include stop-scroll;
-// }
-
-// .is-hidden {
-//   display: none !important; // stylelint-disable-line declaration-no-important
-// }
-
-// .for-mobile {
-//   display: none;
-
-//   @include mobile {
-//     display: block;
-//   }
-// }
-
-// .error {
-//   border: 2px #ff4019 solid !important; // stylelint-disable-line declaration-no-important
-// }
-
-// .js-focus-visible :focus:not(.focus-visible) {
-//   outline: none;
-// }
-// ---------------
-// CUSTOM COMPONENTS STYLES
-// .burger {
-//   --burger-width: 40px;
-//   --burger-height: 20px;
-//   --burger-line-height: 2px;
-
-//   @include burger;
-// }
-// ---------------------
-
-// html{
-//   scroll-behavior: smooth;
-//   // height: 100%;
-// }
-
-// html{
-//   height: 100%;
-//   width: 100%;
-// }
-
-// .wrapper {
-//   display: flex;
-//   flex-direction: column;
-//   min-height: 100vh;
-//   // width: 100%;
-//   position: relative;
-// }
-
-// .noscript-info {
-//   z-index: 100;
-//   width: 100%;
-//   padding: 25px;
-//   font-size: 28px;
-//   line-height: 36px;
-//   text-align: center;
-//   background-color: #fff;
-// }
+  @media (hover: hover) {
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}

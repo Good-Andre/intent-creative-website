@@ -1,9 +1,17 @@
 <!DOCTYPE html>
 <html lang="zxx">
+
 @@include('html/_head.html')
-<body>
-    @@include('html/_header.html')
+
+<body id="top">
+  
+    @@include('html/_header.html', {
+      "nav-links": "@@include('_index-header.html')"
+    })
     @@include('html/_home.html')
     @@include('html/_footer.html')
+    @@include('html/_btn-up.html')
+
 </body>
+
 </html>

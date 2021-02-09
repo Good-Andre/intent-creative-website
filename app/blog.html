@@ -12,7 +12,7 @@
   <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon.png">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <!-- <script src="js/vendor.js" defer></script> -->
+  <script src="js/vendor.js" defer></script>
   <script src="js/main.js" defer></script>
 
   <!-- <link rel="preconnect" href="https://fonts.gstatic.com"> -->
@@ -36,22 +36,22 @@
   <div class="header__top">
     <div class="header__top-container _container">
       <div class="header__social-inner">
-        <a href="#" class="header__social-link">
+        <a href="https://twitter.com" class="header__social-link" target="_blank">
           <svg class="header__social-icon" width="25.437" height="14.25">
             <use xlink:href="img/icons/icons.svg#twitter"></use>
           </svg>
         </a>
-        <a href="#" class="header__social-link">
+        <a href="https://ru-ru.facebook.com" class="header__social-link" target="_blank">
           <svg class="header__social-icon" width="7.5" height="16">
             <use xlink:href="img/icons/icons.svg#facebook"></use>
           </svg>
         </a>
-        <a href="#" class="header__social-link">
+        <a href="https://dribbble.com" class="header__social-link" target="_blank">
           <svg class="header__social-icon" width="16" height="16">
             <use xlink:href="img/icons/icons.svg#dribbble"></use>
           </svg>
         </a>
-        <a href="#" class="header__social-link">
+        <a href="https://rss.com/" class="header__social-link" target="_blank">
           <svg class="header__social-icon" width="16.094" height="16.094">
             <use xlink:href="img/icons/icons.svg#rss"></use>
           </svg>
@@ -73,10 +73,11 @@
         </button>
         <nav class="menu-header__nav nav">
           <ul class="nav__list">
-            <li class="nav__item"><a href="index.html" class="nav__link">home</a></li>
-            <li class="nav__item"><a href="blog.html" class="nav__link">blog</a></li>
-            <li class="nav__item"><a href="portfolio.html" class="nav__link">portfolio</a></li>
-            <li class="nav__item"><a href="contact.html" class="nav__link">contact</a></li>
+            <li class="nav__item _hover"><a href="index.html" class="nav__link">home</a></li>
+<li class="nav__item _hover"><a href="blog.html" class="nav__link nav__link--active">blog</a></li>
+<li class="nav__item"><a href="portfolio.html" class="nav__link _hover">portfolio</a></li>
+<li class="nav__item"><a href="contact.html" class="nav__link _hover">contact</a></li>
+
           </ul>
         </nav>
       </div>
@@ -111,7 +112,7 @@
               <p class="blog-article__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, repudiandae?
                 Molestias atque earum laborum autem possimus quibusdam, maiores ab fugiat quasi expedita voluptatem
                 laudantium voluptatum omnis incidunt. Optio, explicabo fugit!&ensp;<a class="blog-article__more"
-                  href="#"></a></p>
+                  href="#">read more...</a></p>
             </div>
           </div>
         </article>
@@ -139,7 +140,7 @@
               <p class="blog-article__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, repudiandae?
                 Molestias atque earum laborum autem possimus quibusdam, maiores ab fugiat quasi expedita voluptatem
                 laudantium voluptatum omnis incidunt. Optio, explicabo fugit!&ensp;<a class="blog-article__more"
-                  href="#"></a></p>
+                  href="#">read more...</a></p>
             </div>
           </div>
         </article>
@@ -171,15 +172,15 @@
               <p class="blog-article__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, repudiandae?
                 Molestias atque earum laborum autem possimus quibusdam, maiores ab fugiat quasi expedita voluptatem
                 laudantium voluptatum omnis incidunt. Optio, explicabo fugit!&ensp;<a class="blog-article__more"
-                  href="#"></a></p>
+                  href="#">read more...</a></p>
             </div>
           </div>
         </article>
       </li>
       <div class="blog__content-pagination">
-        <a href="#" class="blog__content-link blog__content-link--active">1</a>
-        <a href="#" class="blog__content-link">2</a>
-        <a href="#" class="blog__content-link">3</a>
+        <a href="#" class="blog__content-link blog__content-link--active _hover">1</a>
+        <a href="#" class="blog__content-link _hover">2</a>
+        <a href="#" class="blog__content-link _hover">3</a>
       </div>
     </ul>
     <ul class="blog__aside-list">
@@ -195,22 +196,22 @@
           <h4 class="aside-article__title">Categories</h4>
           <ul class="aside-article__list">
             <li class="aside-article__list-item">
-              <a class="aside-article__item-link" href="#">Video (3)</a>
+              <a class="aside-article__item-link _hover" href="#">Video (3)</a>
             </li>
             <li class="aside-article__list-item">
-              <a class="aside-article__item-link" href="#">Sports (5)</a>
+              <a class="aside-article__item-link _hover" href="#">Sports (5)</a>
             </li>
             <li class="aside-article__list-item">
-              <a class="aside-article__item-link" href="#">Media (2)</a>
+              <a class="aside-article__item-link _hover" href="#">Media (2)</a>
             </li>
             <li class="aside-article__list-item">
-              <a class="aside-article__item-link" href="#">Entertainment (7)</a>
+              <a class="aside-article__item-link _hover" href="#">Entertainment (7)</a>
             </li>
             <li class="aside-article__list-item">
-              <a class="aside-article__item-link" href="#">Life (4)</a>
+              <a class="aside-article__item-link _hover" href="#">Life (4)</a>
             </li>
             <li class="aside-article__list-item">
-              <a class="aside-article__item-link" href="#">Super Cool Stuff (8)</a>
+              <a class="aside-article__item-link _hover" href="#">Super Cool Stuff (8)</a>
             </li>
           </ul>
         </article>
@@ -315,6 +316,14 @@
     </div>
   </div>
 </footer>
+  <button class="up-btn btn">
+  <svg class="up-btn__icon" width="8.2965" height="14.157">
+    <use xlink:href="img/icons/icons.svg#arrow"></use>
+  </svg>
+  <!-- <img src="img/icons/arrow.svg" alt="icon: up button"> -->
+</button>
+
+
 
 </body>
 

@@ -1,6 +1,5 @@
 .footer {
-  background-color: var(--color-black-brown);
-  background-image: url(../img/footer-container.jpg);
+  background: var(--color-black-brown) url(../img/footer-container.jpg);
   border-top: 8px solid var(--color-mandarin-tango);
 
   @media (max-width: $sm) {
@@ -10,15 +9,11 @@
   &__container {
     display: flex;
     gap: 26px;
-    padding-right: 20px;
-    padding-bottom: 46px;
-    padding-left: 20px;
+    padding: 0 20px 46px;
     margin-top: 61px;
 
     @media (max-width: $md) {
       flex-direction: column;
-      // padding-left: 20px;
-      // padding-right: 20px;
     }
 
     @media (max-width: $sm) {
@@ -37,7 +32,7 @@
 
   &__title {
     margin-bottom: 20px;
-    font-size: 14px;
+    font-size: 1rem;
     font-weight: 700;
     color: var(--color-white);
     text-transform: uppercase;
@@ -48,7 +43,7 @@
     margin-top: 15px;
     font-family: 'Bitter', serif;
     font-weight: 700;
-    line-height: 18px;
+    line-height: 1.28rem;
     color: var(--color-white-aluminum);
     letter-spacing: 0.5px;
 
@@ -60,11 +55,11 @@
 
   &__about-text {
     font-weight: 700;
-    line-height: 18px;
+    line-height: 1.28rem;
     color: var(--color-white-aluminum);
 
     &:not(:last-child) {
-      margin-bottom: 18px; // ПРОВЕРИТЬ
+      margin-bottom: 18px;
     }
   }
 

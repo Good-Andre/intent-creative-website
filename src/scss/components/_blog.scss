@@ -6,36 +6,31 @@
 
     @media (max-width: $md) {
       flex-direction: column;
-      // padding-left: 15px;
-      // padding-right: 15px;
     }
 
     @media (max-width: $sm) {
-      padding-bottom: 12px;
+      padding: 17px 27px 12px;
     }
   }
 
   &__list {
-    // flex: 0 0 auto;
-    max-width: 650px;
     width: 100%;
+    max-width: 650px;
     padding-right: 15px;
 
     @media (max-width: $md) {
-      padding-right: 0;
       max-width: 100%;
+      padding-right: 0;
     }
 
     @media (max-width: $sm) {
-      padding-left: 10px;
-      padding-right: 10px;
+      padding: 0 10px;
     }
   }
 
   &__aside-list {
     flex: 0 0 206px;
     margin-left: 15px;
-    // background-color: #bbb;
 
     @media (max-width: $md) {
       margin-top: 40px;
@@ -43,21 +38,15 @@
     }
 
     @media (max-width: $sm) {
-      padding-left: 10px;
-      padding-right: 10px;
+      padding: 0 10px;
     }
   }
 
   &__aside-item {
     margin-bottom: 15px;
-    // background-color: #bbb;
 
     &:last-child {
       margin-bottom: 0;
-    }
-
-    @media (max-width: $sm) {
-      // margin: 0 auto;
     }
   }
 
@@ -72,7 +61,6 @@
 
   &__article {
     padding-bottom: 31px;
-    // background-color: #bbb;
   }
 
   &__content-pagination {
@@ -85,34 +73,20 @@
     padding: 5.7px 6.3px 5.2px 6.7px;
     font-weight: 700;
     color: var(--color-black-brown);
-    transition: opacity 0.2s;
 
     &--active {
       color: var(--color-white);
       background-color: var(--color-mandarin-tango);
     }
-
-    @media (hover: hover) {
-      &:hover {
-        opacity: 0.6;
-      }
-    }
   }
 }
 
 .blog-article {
-
-  // @media (max-width: $sm) {
-  //   padding-left: 10px;
-  //   padding-right: 10px;
-  // }
-
   &__title {
     margin-bottom: 15px;
     font-family: 'Bitter', serif;
-    font-size: 18px;
+    font-size: 1.28rem;
     color: var(--color-gray-brown);
-    // background-color: #FFFFB9;
   }
 
   &__audio {
@@ -126,11 +100,9 @@
 
   &__inner {
     display: flex;
+    gap: 15px;
     justify-content: space-between;
     margin-top: 30px;
-    // gap: 50px;
-    gap: 15px;
-    // font-size: 14px;
     color: var(--color-black-brown);
 
     @media (max-width: $md) {
@@ -141,27 +113,23 @@
   &__description {
     width: 100%;
     max-width: 105px;
-    // background-color: #fff;
   }
 
   &__desc-item {
-    font-weight: 500;
     font-family: 'Bitter', serif;
-    // margin-bottom: 4px;
+    font-weight: 500;
+
     &:not(:first-child) {
       margin-top: 15px;
     }
   }
 
   &__desc-value {
-    // margin-bottom: 7px;
     margin-top: 6px;
-    letter-spacing: 0.3px;
-    color: var(--color-mandarin-tango);
-    // line-height: 1.5px;
-    font-size: 12px;
-    // font-weight: 500;
     font-family: 'Roboto', sans-serif;
+    font-size: 0.86rem;
+    color: var(--color-mandarin-tango);
+    letter-spacing: 0.3px;
   }
 
   &__text-inner {
@@ -173,34 +141,33 @@
   }
 
   &__text {
-    line-height: 18px;
-    // position: relative;
+    line-height: 1.28rem;
+
     &:not(:last-child) {
       margin-bottom: 18px;
     }
   }
 
   &__more {
-    &::after {
-      color: var(--color-black);
-      letter-spacing: 1.1px;
-      content: '...';
-    }
+    font-size: 0.86rem;
+    color: var(--color-black);
+    letter-spacing: 1.1px;
+    opacity: 0.5;
   }
 
   &__video-inner {
     position: relative;
-    overflow: hidden;
     width: 100%;
     padding-top: 56.25%;
+    overflow: hidden;
   }
 
   &__video {
     position: absolute;
     top: 0;
-    left: 0;
-    bottom: 0;
     right: 0;
+    bottom: 0;
+    left: 0;
     width: 100%;
     height: 100%;
   }
@@ -210,20 +177,16 @@
   padding-bottom: 9px;
 
   @media (max-width: $md) {
-    text-align: center;
     max-width: 430px;
     margin: 0 auto;
+    text-align: center;
   }
-
-  // @media (max-width: $sm) {
-  //   text-align: center;
-  // }
 
   &__title {
     padding-bottom: 6px;
     margin-bottom: 20px;
     font-family: 'Bitter', serif;
-    font-size: 16px;
+    font-size: 1.14rem;
     color: var(--color-black-brown);
     border-bottom: 5px solid var(--color-mandarin-tango);
 
@@ -233,7 +196,7 @@
   }
 
   &__text {
-    line-height: 18px;
+    line-height: 1.28rem;
     color: var(--color-black-brown);
   }
 
@@ -243,13 +206,6 @@
 
   &__item-link {
     color: var(--color-black-brown);
-    transition: opacity 0.2s;
-
-    @media (hover: hover) {
-      &:hover {
-        opacity: 0.6;
-      }
-    }
   }
 
   &__adv-inner {

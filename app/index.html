@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zxx">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -11,7 +12,7 @@
   <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon.png">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <!-- <script src="js/vendor.js" defer></script> -->
+  <script src="js/vendor.js" defer></script>
   <script src="js/main.js" defer></script>
 
   <!-- <link rel="preconnect" href="https://fonts.gstatic.com"> -->
@@ -28,27 +29,29 @@
   <link rel="stylesheet" href="css/main.min.css">
 
 </head>
-<body>
+
+<body id="top">
+  
     <header class="header">
   <div class="header__top">
     <div class="header__top-container _container">
       <div class="header__social-inner">
-        <a href="#" class="header__social-link">
+        <a href="https://twitter.com" class="header__social-link" target="_blank">
           <svg class="header__social-icon" width="25.437" height="14.25">
             <use xlink:href="img/icons/icons.svg#twitter"></use>
           </svg>
         </a>
-        <a href="#" class="header__social-link">
+        <a href="https://ru-ru.facebook.com" class="header__social-link" target="_blank">
           <svg class="header__social-icon" width="7.5" height="16">
             <use xlink:href="img/icons/icons.svg#facebook"></use>
           </svg>
         </a>
-        <a href="#" class="header__social-link">
+        <a href="https://dribbble.com" class="header__social-link" target="_blank">
           <svg class="header__social-icon" width="16" height="16">
             <use xlink:href="img/icons/icons.svg#dribbble"></use>
           </svg>
         </a>
-        <a href="#" class="header__social-link">
+        <a href="https://rss.com/" class="header__social-link" target="_blank">
           <svg class="header__social-icon" width="16.094" height="16.094">
             <use xlink:href="img/icons/icons.svg#rss"></use>
           </svg>
@@ -70,10 +73,11 @@
         </button>
         <nav class="menu-header__nav nav">
           <ul class="nav__list">
-            <li class="nav__item"><a href="index.html" class="nav__link">home</a></li>
-            <li class="nav__item"><a href="blog.html" class="nav__link">blog</a></li>
-            <li class="nav__item"><a href="portfolio.html" class="nav__link">portfolio</a></li>
-            <li class="nav__item"><a href="contact.html" class="nav__link">contact</a></li>
+            <li class="nav__item"><a href="index.html" class="nav__link nav__link--active _hover">home</a></li>
+<li class="nav__item"><a href="blog.html" class="nav__link _hover">blog</a></li>
+<li class="nav__item"><a href="portfolio.html" class="nav__link _hover">portfolio</a></li>
+<li class="nav__item"><a href="contact.html" class="nav__link _hover">contact</a></li>
+
           </ul>
         </nav>
       </div>
@@ -85,7 +89,7 @@
   <div class="home__slider">
     <div class="swiper-wrapper">
 
-      <div class="home__slide home__slide-1 swiper-slide">
+      <div class="home__slide home__slide-1 swiper-slide" style="background-image: url(../img/slide-1.jpg);">
         <div class="home__slide-inner _container">
           <h2 class="home__slide-title">Place Your Description Text</h2><br />
           <div class="home__slide-desc">Here. Great Spot to Tell</div><br />
@@ -93,7 +97,7 @@
         </div>
       </div>
 
-      <div class="home__slide home__slide-2 swiper-slide">
+      <div class="home__slide home__slide-2 swiper-slide" style="background-image: url(../img/slide-2.jpg);">
         <div class="home__slide-inner _container">
           <h2 class="home__slide-title">Here. Great Spot to Tell</h2><br />
           <div class="home__slide-desc">Place Your Description Text</div><br />
@@ -101,7 +105,7 @@
         </div>
       </div>
 
-      <div class="home__slide home__slide-3 swiper-slide">
+      <div class="home__slide home__slide-3 swiper-slide" style="background-image: url(../img/slide-3.jpg);">
         <div class="home__slide-inner _container">
           <h2 class="home__slide-title">About Deals.</h2><br />
           <div class="home__slide-desc">Here. Great Spot to Tell</div><br />
@@ -109,7 +113,7 @@
         </div>
       </div>
 
-      <div class="home__slide home__slide-4 swiper-slide">
+      <div class="home__slide home__slide-4 swiper-slide" style="background-image: url(../img/slide-4.jpg);">
         <div class="home__slide-inner _container">
           <h2 class="home__slide-title">About Deals.</h2><br />
           <div class="home__slide-desc">Here. Great Spot to Tell</div><br />
@@ -117,7 +121,7 @@
         </div>
       </div>
 
-      <div class="home__slide home__slide-5 swiper-slide">
+      <div class="home__slide home__slide-5 swiper-slide" style="background-image: url(../img/slide-5.jpg);">
         <div class="home__slide-inner _container">
           <h2 class="home__slide-title">About Deals.</h2><br />
           <div class="home__slide-desc">Here. Great Spot to Tell</div><br />
@@ -125,7 +129,7 @@
         </div>
       </div>
 
-      <div class="home__slide home__slide-6 swiper-slide">
+      <div class="home__slide home__slide-6 swiper-slide" style="background-image: url(../img/slide-6.jpg);">
         <div class="home__slide-inner _container">
           <h2 class="home__slide-title">About Deals.</h2><br />
           <div class="home__slide-desc">Here. Great Spot to Tell</div><br />
@@ -133,7 +137,7 @@
         </div>
       </div>
 
-      <div class="home__slide home__slide-7 swiper-slide">
+      <div class="home__slide home__slide-7 swiper-slide" style="background-image: url(../img/slide-7.jpg);">
         <div class="home__slide-inner _container">
           <h2 class="home__slide-title">About Deals.</h2><br />
           <div class="home__slide-desc">Here. Great Spot to Tell</div><br />
@@ -141,7 +145,7 @@
         </div>
       </div>
 
-      <div class="home__slide home__slide-8 swiper-slide">
+      <div class="home__slide home__slide-8 swiper-slide" style="background-image: url(../img/slide-8.jpg);">
         <div class="home__slide-inner _container">
           <h2 class="home__slide-title">About Deals.</h2><br />
           <div class="home__slide-desc">Here. Great Spot to Tell</div><br />
@@ -149,7 +153,7 @@
         </div>
       </div>
 
-      <div class="home__slide home__slide-9 swiper-slide">
+      <div class="home__slide home__slide-9 swiper-slide" style="background-image: url(../img/slide-9.jpg);">
         <div class="home__slide-inner _container">
           <h2 class="home__slide-title">About Deals.</h2><br />
           <div class="home__slide-desc">Here. Great Spot to Tell</div><br />
@@ -157,7 +161,7 @@
         </div>
       </div>
 
-      <div class="home__slide home__slide-10 swiper-slide">
+      <div class="home__slide home__slide-10 swiper-slide" style="background-image: url(../img/slide-10.jpg);">
         <div class="home__slide-inner _container">
           <h2 class="home__slide-title">About Deals.</h2><br />
           <div class="home__slide-desc">Here. Great Spot to Tell</div><br />
@@ -168,11 +172,15 @@
 
     <div class="home__slide-btn--inner">
       <div class="home__slide-btns _container">
-        <button class="home__slide-btn home__slide-prev">
-          <img src="img/icons/prev-arrow.svg" alt="icon: prev-arrow">
+        <button class="home__slide-btn home__slide-prev _hover">
+          <svg class="home__slide-icon home__slide-icon--prev" width="7.531" height="11.438">
+            <use xlink:href="img/icons/icons.svg#arrow"></use>
+          </svg>
         </button>
-        <button class="home__slide-btn home__slide-next">
-          <img src="img/icons/next-arrow.svg" alt="icon: next-arrow">
+        <button class="home__slide-btn home__slide-next _hover">
+          <svg class="home__slide-icon home__slide-icon--next" width="7.531" height="11.438">
+            <use xlink:href="img/icons/icons.svg#arrow"></use>
+          </svg>
         </button>
       </div>
     </div>
@@ -181,16 +189,16 @@
 
   <div class="home__slider-thumbs _container">
     <div class="swiper-wrapper home__thumbs-wrapper">
-      <div class="swiper-slide home__thumb"></div>
-      <div class="swiper-slide home__thumb"></div>
-      <div class="swiper-slide home__thumb"></div>
-      <div class="swiper-slide home__thumb"></div>
-      <div class="swiper-slide home__thumb"></div>
-      <div class="swiper-slide home__thumb"></div>
-      <div class="swiper-slide home__thumb"></div>
-      <div class="swiper-slide home__thumb"></div>
-      <div class="swiper-slide home__thumb"></div>
-      <div class="swiper-slide home__thumb""></div>
+      <div class="swiper-slide home__thumb" style="background-image: url(img/slide-sm-1.jpg);"></div>
+      <div class="swiper-slide home__thumb" style="background-image: url(img/slide-sm-2.jpg);"></div>
+      <div class="swiper-slide home__thumb" style="background-image: url(img/slide-sm-3.jpg);"></div>
+      <div class="swiper-slide home__thumb" style="background-image: url(img/slide-sm-4.jpg);"></div>
+      <div class="swiper-slide home__thumb" style="background-image: url(img/slide-sm-5.jpg);"></div>
+      <div class="swiper-slide home__thumb" style="background-image: url(img/slide-sm-6.jpg);"></div>
+      <div class="swiper-slide home__thumb" style="background-image: url(img/slide-sm-7.jpg);"></div>
+      <div class="swiper-slide home__thumb" style="background-image: url(img/slide-sm-8.jpg);"></div>
+      <div class="swiper-slide home__thumb" style="background-image: url(img/slide-sm-9.jpg);"></div>
+      <div class="swiper-slide home__thumb" style="background-image: url(img/slide-sm-10.jpg);"></div>
     </div>
   </div>
 
@@ -204,8 +212,10 @@
     <section class="features">
       <h2 class="visually-hidden">Features</h2>
       <div class="features__col">
-        <div class="features__icon">
-          <img src="img/icons/gear-icon.svg" alt="icon: gear">
+        <div class="features__icon-inner">
+          <svg class="features__icon" width="15.969" height="15.969">
+            <use xlink:href="img/icons/icons.svg#gear-icon"></use>
+          </svg>
         </div>
         <div class="features__title">Awesome Sliders</div>
         <p class="features__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non est quibusdam
@@ -215,8 +225,10 @@
           libero cumque culpa, impedit, nihil.</p>
       </div>
       <div class="features__col">
-        <div class="features__icon">
-          <img src="img/icons/user-icon.svg" alt="icon: user">
+        <div class="features__icon-inner">
+          <svg class="features__icon" width="18.281" height="15.969">
+            <use xlink:href="img/icons/icons.svg#user-icon"></use>
+          </svg>
         </div>
         <div class="features__title">Modern Theme</div>
         <p class="features__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate iure
@@ -226,8 +238,10 @@
           rem recusandae?</p>
       </div>
       <div class="features__col">
-        <div class="features__icon">
-          <img src="img/icons/pen-icon.svg" alt="icon: pen">
+        <div class="features__icon-inner">
+          <svg class="features__icon" width="16.094" height="16.032">
+            <use xlink:href="img/icons/icons.svg#pen-icon"></use>
+          </svg>
         </div>
         <div class="features__title">Customize It</div>
         <p class="features__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem, dolores
@@ -390,5 +404,15 @@
     </div>
   </div>
 </footer>
+    <button class="up-btn btn">
+  <svg class="up-btn__icon" width="8.2965" height="14.157">
+    <use xlink:href="img/icons/icons.svg#arrow"></use>
+  </svg>
+  <!-- <img src="img/icons/arrow.svg" alt="icon: up button"> -->
+</button>
+
+
+
 </body>
+
 </html>
