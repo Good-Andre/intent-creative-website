@@ -1,0 +1,167 @@
+.contact {
+  &__layout._layout {
+    @media (max-width: $md) {
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+
+    @media (max-width: $sm) {
+      padding-top: 0;
+    }
+  }
+
+  &__map {
+    max-height: 400px;
+    margin-bottom: 30px;
+  }
+
+  &__bottom {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    width: 100%;
+
+    @media (max-width: $md) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__contacts {
+    width: 230px;
+    line-height: 1.14rem;
+
+    @media (max-width: $md) {
+      width: 100%;
+      max-width: 624px;
+      padding: 0 15px;
+    }
+
+    @media (max-width: $sm) {
+      text-align: center;
+    }
+  }
+
+  &__contacts-text {
+    margin-bottom: 16px;
+  }
+
+  &__contacts-title {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--color-mandarin-tango);
+  }
+
+  &__contacts-address {
+    margin-bottom: 16px;
+    font-style: normal;
+  }
+
+  &__contacts-links {
+    color: inherit;
+    transition: text-decoration .2s;
+
+    @media (hover: hover) {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__form {
+    display: block;
+    width: 100%;
+    max-width: 595px;
+  }
+}
+
+.form {
+  @media (max-width: $md) {
+    text-align: center;
+  }
+
+  &__input-inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 15px;
+
+    @media (max-width: $sm) {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 3px;
+      margin-bottom: 3px;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    max-width: 290px;
+    padding: 8px 14px;
+    color: var(--color-black-brown);
+    border: 1px solid var(--color-black-brown);
+
+    @media (max-width: $sm) {
+      max-width: 460px;
+    }
+
+    &::placeholder {
+      font-weight: 500;
+      color: var(--color-black-brown);
+      opacity: 1;
+    }
+
+    &:focus {
+      border: 1px solid var(--color-mandarin-tango);
+      outline: var(--color-mandarin-tango);
+
+      &::placeholder {
+        color: var(--color-mandarin-tango);
+      }
+    }
+  }
+
+  &__textarea {
+    width: 100%;
+    padding: 12px 14px;
+    color: var(--color-black-brown);
+    resize: vertical;
+    border: 1px solid var(--color-black-brown);
+    border-radius: 2px;
+
+    &::placeholder {
+      font-weight: 500;
+      color: var(--color-black-brown);
+      opacity: 1;
+    }
+
+    &:focus {
+      border: 1px solid var(--color-mandarin-tango);
+      outline: var(--color-mandarin-tango);
+
+      &::placeholder {
+        color: var(--color-mandarin-tango);
+      }
+    }
+  }
+
+  &__submit {
+    height: 31px;
+    padding: 9px 12px 7px;
+    margin-top: 15px;
+    font-size: 0.86rem;
+    font-weight: 500;
+    color: var(--color-white);
+    text-transform: uppercase;
+    background-color: var(--color-mandarin-tango);
+    border: 1px solid var(--color-mandarin-tango);
+    transition: all 0.2s;
+
+    @media (hover: hover) {
+      &:hover {
+        color: #b00;
+        background-color: var(--color-white);
+        border: 1px solid #b00;
+      }
+    }
+  }
+}

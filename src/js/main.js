@@ -7,6 +7,7 @@ const $projectsList = document.querySelector('.projects__list');
 const $menuHeaderBurger = document.querySelector('.menu-header__burger');
 const $menuHeaderNav = document.querySelector('.menu-header__nav');
 const $headerTop = document.querySelector('.header__top');
+const $contactForm = document.getElementById('footer-form');
 const $upBtn = document.querySelector('.up-btn');
 
 // SMALL SLIDER thumbs
@@ -27,8 +28,8 @@ const introSliderItem = new Swiper($introSlider, {
   slidesPerView: 1,
   grabCursor: true,
   navigation: {
-    nextEl: '.home__slide-next',
-    prevEl: '.home__slide-prev',
+    nextEl: '.slider-btns__next',
+    prevEl: '.slider-btns__prev',
   },
   autoplay: {
     delay: 5000,
@@ -52,7 +53,8 @@ const introSliderItem = new Swiper($introSlider, {
 try {
   var mixer = mixitup($projectsList, {
     animation: {
-      effects: 'fade translateZ(-100px)'
+      effects: 'fade translateZ(-100px)',
+      animateResizeTargets: true
     },
   });
 
@@ -85,7 +87,10 @@ try {
   }
 
   $projectsFilter.addEventListener('click', filterFunc, false);
-
+  $contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    $contactForm.reset();
+  });
 } catch (err) {
   // console.log('Ошибка: ' + e.name);
 }
@@ -150,9 +155,9 @@ window.addEventListener('resize', () => {
 
 window.addEventListener('scroll', () => {
   if (window.scrollY > 400) {
-    $upBtn.style.display = 'block';
+    $upBtn.classList.add('_btn-show');
   } else {
-    $upBtn.style.display = 'none';
+    $upBtn.classList.remove('_btn-show');
   }
 });
 

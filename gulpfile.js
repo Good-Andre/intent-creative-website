@@ -9,6 +9,7 @@ const rename = require('gulp-rename');
 const fileinclude = require('gulp-file-include');
 const sourcemaps = require('gulp-sourcemaps');
 const notify = require('gulp-notify');
+const svgSprite = require('gulp-svg-sprite');
 const image = require('gulp-image');
 const htmlmin = require('gulp-htmlmin');
 const groupMedia = require('gulp-group-css-media-queries');
@@ -29,7 +30,7 @@ const fonts = () => {
 };
 
 const img = () => {
-  return src(['./src/img/**/*.{svg,jpg,JPG,jpeg,png,gif,ico,tiff,webp}'])
+  return src(['./src/img/**/*.{svg,jpg,jpeg,png,ico}'])
     .pipe(gulpif(isProd, image()))
     .pipe(dest('./app/img'))
     .pipe(browserSync.stream());
@@ -102,7 +103,8 @@ const watchFiles = () => {
   watch('./src/html/*.html', htmlInclude);
   watch('./src/*.html', htmlInclude);
   watch('./src/resources/**', resources);
-  watch('./src/img/**/*.{svg,jpg,JPG,jpeg,png,gif,ico,tiff,webp}', img);
+  watch('./src/img/**/*.{svg,jpg,jpeg,png,ico}', img);
+  watch('./src/img/svg/**.svg', svgSprites);
   watch('./src/fonts/**', fonts);
 };
 
@@ -110,14 +112,23 @@ const clean = () => {
   return del(['app/*']);
 };
 
+const svgSprites = () => {
+  src('./src/img/svg/*.svg')
+    .pipe(svgSprite({
+      mode: {
+        stack: {
+          sprite: "../icons.svg"
+        }
+      },
+    }))
+    .pipe(dest('./app/img/icons'));
+    return del(['./app/img/svg']);
+}
+
 exports.fileinclude = htmlInclude;
 
 exports.default = series(
-  clean,
-  parallel(htmlInclude, scripts, fonts, resources, img),
-  styles,
-  watchFiles
-);
+  clean, htmlInclude, scripts, fonts, resources, styles, img, svgSprites, watchFiles);
 
 const stylesBuild = () => {
   return src('./src/scss/**/*.scss')
@@ -164,6 +175,7 @@ exports.build = series(
   clean,
   parallel(htmlInclude, scripts, fonts, resources),
   stylesBuild,
-  htmlMinify,
-  img
+  img,
+  svgSprites,
+  htmlMinify
 );

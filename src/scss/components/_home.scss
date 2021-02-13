@@ -47,7 +47,7 @@
     }
   }
 
-  &__slide-btn--inner {
+  &__slider-btns {
     position: absolute;
     top: 19%;
     z-index: 11;
@@ -67,25 +67,6 @@
     }
   }
 
-  &__slide-btn {
-    padding: 14px 17px 10px;
-    margin-right: 1px;
-    background-color: var(--color-mandarin-tango);
-
-    @media (max-width: $xl) {
-      padding: 9px 12px 5px;
-    }
-  }
-
-  &__slide-icon {
-    fill: var(--color-white);
-    fill-rule: evenodd;
-
-    &--next {
-      transform: rotate(180deg);
-    }
-  }
-
   &__slider-thumbs {
     position: relative;
     z-index: 12;
@@ -93,7 +74,6 @@
     height: 130px;
     margin-top: -130px; //
     background-color: rgba(0, 0, 0, 0.2);
-    // background-image: none; //
     transition: margin-top 0.3s;
 
     @media (max-width: $md) {
@@ -167,6 +147,33 @@
       padding-bottom: 0;
     }
   }
+
+  &__slogan {
+    padding-bottom: 36px;
+    margin: 55px 0 19px;
+    font-family: 'Bitter', serif;
+    font-size: 1.28rem;
+    font-weight: 500;
+    text-align: center;
+
+    @media (max-width: $sm) {
+      font-size: 1.14rem;
+    }
+  }
+
+  &__slogan-span {
+    padding: 8px 13px;
+    margin: 0 6px;
+    font-weight: 700;
+    color: #fff;
+    background-color: var(--color-mandarin-tango);
+
+    @media (max-width: $md) {
+      font-weight: 500;
+      color: var(--color-mandarin-tango);
+      background-color: transparent;
+    }
+  }
 }
 
 .features {
@@ -222,31 +229,30 @@
     line-height: 1.21rem;
     color: var(--color-wet-asphalt);
   }
+}
 
-  &__bottom {
-    padding-bottom: 36px;
-    margin: 55px 0 19px;
-    font-family: 'Bitter', serif;
-    font-size: 1.28rem;
-    font-weight: 500;
-    text-align: center;
+.slider-btns {
+  &__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin-right: 1px;
+    background-color: var(--color-mandarin-tango);
 
-    @media (max-width: $sm) {
-      font-size: 1.14rem;
+    @media (max-width: $xl) {
+      width: 32px;
+      height: 32px;
     }
   }
 
-  &__bottom-span {
-    padding: 8px 13px;
-    margin: 0 6px;
-    font-weight: 700;
-    color: #fff;
-    background-color: var(--color-mandarin-tango);
+  &__next {
+    padding-left: 1px;
+  }
 
-    @media (max-width: $md) {
-      font-weight: 500;
-      color: var(--color-mandarin-tango);
-      background-color: transparent;
-    }
+  &__icon {
+    fill: var(--color-white);
+    fill-rule: evenodd;
   }
 }

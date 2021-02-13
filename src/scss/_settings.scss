@@ -39,8 +39,20 @@ a:hover {
   text-decoration: none;
 }
 
-a:active,
-a:focus {
+a:active {
+  outline: none;
+}
+
+// a:active,
+// a:focus {
+//   outline: none;
+// }
+
+// button:focus {
+//   outline: none;
+// }
+
+button:active {
   outline: none;
 }
 
@@ -53,7 +65,14 @@ img {
   vertical-align: top;
 }
 
+// html {
+// height: 100%;
+// width: 100%;
+// scroll-behavior: smooth;
+// }
+
 body {
+  // height: 100%;
   width: 100%;
   font-family: 'Roboto', sans-serif;
   font-size: 1rem;
@@ -132,6 +151,7 @@ body {
 }
 
 ._layout-title {
+  margin-top: 0;
   margin-bottom: 5px;
   font-size: 2.14rem;
   color: var(--color-white);
@@ -180,12 +200,23 @@ body {
     fill: var(--color-gray-brown);
     transition: fill 0.3s;
     transform: rotate(90deg);
-  }
 
+    @media (max-width: $md) {
+      fill: var(--color-white);
+    }
+  }
+}
+
+._btn-show {
   @media (min-width: $sm) {
     position: fixed;
     top: 35%;
     right: 22px;
+    display: block;
+  }
+
+  @media (max-width: $md) {
+    background-color: var(--color-mandarin-tango);
   }
 }
 
@@ -196,5 +227,15 @@ body {
     &:hover {
       opacity: 0.6;
     }
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0.1;
+  }
+
+  to {
+    opacity: 1;
   }
 }

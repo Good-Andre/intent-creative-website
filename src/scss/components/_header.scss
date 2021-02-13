@@ -87,10 +87,6 @@
     font-weight: 500;
     line-height: 56px;
     cursor: pointer;
-
-    @media (max-width: $sm) {
-      line-height: auto;
-    }
   }
 
   &__logo-text {
