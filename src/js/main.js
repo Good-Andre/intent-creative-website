@@ -76,11 +76,6 @@ try {
             'projects__btn--active'
           );
           e.target.classList.add('projects__btn--active');
-          $projectsItem.forEach((item) => {
-            if (item.dataset.cat != catFilter) {
-              item.classList.remove('projects__btn--active');
-            }
-          });
         }
       }
     }

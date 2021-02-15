@@ -4,7 +4,7 @@
   "description": "Intent Creative PSD Theme | Free Website Theme",
   "main": "index.html",
   "scripts": {
-    "dev": "gulp",
+    "start": "gulp",
     "build": "gulp build"
   },
   "author": "Good-Andre",
