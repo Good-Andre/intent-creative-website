@@ -48,16 +48,7 @@ const introSliderItem = new Swiper($introSlider, {
   }
 });
 
-// PROJECTS FILTER mixitup lib.
-
 try {
-  var mixer = mixitup($projectsList, {
-    animation: {
-      effects: 'fade translateZ(-100px)',
-      animateResizeTargets: true
-    },
-  });
-
   // PROJECTS FILTER active btn
 
   function filterFunc(e) {
@@ -134,6 +125,40 @@ const resizeContent = (
   }
 };
 
+// MIXITUP plugin
+
+try {
+  let mixer = mixitup($projectsList, {
+    animation: {
+      clampHeight: false,
+    },
+  });
+
+  function mixerDescConf() {
+    mixer.configure({
+      animation: {
+        enable: true,
+      },
+    });
+  }
+
+  function mixerMobConf() {
+    mixer.configure({
+      animation: {
+        enable: false,
+      },
+    });
+  }
+
+  if (window.innerWidth > 480) {
+    mixerDescConf();
+  }
+  
+  if (window.innerWidth < 480) {
+    mixerMobConf();
+  }
+} catch(err) {}
+
 // RESIZE EVENTS
 
 window.addEventListener('resize', () => {
@@ -144,6 +169,10 @@ window.addEventListener('resize', () => {
     activeDelete,
     ()=>{}
   );
+
+  try {
+    resizeContent($projectsList, 480, true, mixerDescConf, mixerMobConf);
+  } catch(err) {}
 });
 
 // BTN-UP scroll to TOP
