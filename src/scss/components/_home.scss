@@ -1,4 +1,8 @@
 .home {
+  @media (max-width: $sm) {
+    padding-top: 50px;
+  }
+
   &__slider {
     height: calc(100vh - 103px);
     overflow: hidden;
@@ -8,7 +12,7 @@
     }
 
     @media (max-width: $sm) {
-      height: calc(100vh);
+      height: calc(100vh - 50px);
     }
   }
 
@@ -63,7 +67,7 @@
     }
 
     @media (max-width: $sm) {
-      margin-top: 132px;
+      margin-top: 172px;
     }
   }
 
@@ -72,7 +76,7 @@
     z-index: 12;
     max-width: 940px;
     height: 130px;
-    margin-top: -130px; //
+    margin-top: -130px;
     background-color: rgba(0, 0, 0, 0.2);
     transition: margin-top 0.3s;
 
@@ -157,6 +161,7 @@
     text-align: center;
 
     @media (max-width: $sm) {
+      margin: 35px 0 0;
       font-size: 1.14rem;
     }
   }
@@ -165,7 +170,7 @@
     padding: 8px 13px;
     margin: 0 6px;
     font-weight: 700;
-    color: #fff;
+    color: var(--color-white);
     background-color: var(--color-mandarin-tango);
 
     @media (max-width: $md) {

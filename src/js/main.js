@@ -18,7 +18,7 @@ const galleryThumbsItem = new Swiper($mainSliderThumbs, {
   freeMode: true,
   watchSlidesVisibility: true,
   watchSlidesProgress: true,
-  allowTouchMove: false
+  allowTouchMove: false,
 });
 
 // MAIN SLIDER
@@ -40,12 +40,12 @@ const introSliderItem = new Swiper($introSlider, {
     enabled: true,
   },
   thumbs: {
-    swiper: galleryThumbsItem
+    swiper: galleryThumbsItem,
   },
   pagination: {
     el: '.home__slider-pagination',
     clickable: true,
-  }
+  },
 });
 
 try {
@@ -78,12 +78,11 @@ try {
     $contactForm.reset();
   });
 } catch (err) {
-  // console.log('Ошибка: ' + e.name);
 }
 
 // BURGER
 
-$menuHeaderBurger.addEventListener('click', ()=> {
+$menuHeaderBurger.addEventListener('click', () => {
   $menuHeaderBurger.classList.toggle('_active');
   $menuHeaderNav.classList.toggle('_active');
   $headerTop.classList.toggle('_active');
@@ -93,7 +92,7 @@ const activeDelete = () => {
   $menuHeaderBurger.classList.remove('_active');
   $menuHeaderNav.classList.remove('_active');
   $headerTop.classList.remove('_active');
-}
+};
 
 // resize plugin
 
@@ -125,8 +124,7 @@ const resizeContent = (
   }
 };
 
-// MIXITUP plugin
-
+// MIXER
 try {
   let mixer = mixitup($projectsList, {
     animation: {
@@ -162,13 +160,7 @@ try {
 // RESIZE EVENTS
 
 window.addEventListener('resize', () => {
-  resizeContent(
-    $menuHeaderBurger,
-    480,
-    true,
-    activeDelete,
-    ()=>{}
-  );
+  resizeContent($menuHeaderBurger, 480, true, activeDelete, () => {});
 
   try {
     resizeContent($projectsList, 480, true, mixerDescConf, mixerMobConf);
@@ -188,6 +180,6 @@ window.addEventListener('scroll', () => {
 $upBtn.addEventListener('click', () => {
   window.scroll({
     behavior: 'smooth',
-    top: document.getElementById('top')
+    top: document.getElementById('top'),
   });
 });

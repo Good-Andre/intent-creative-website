@@ -59,7 +59,7 @@
 
   &__contacts-links {
     color: inherit;
-    transition: text-decoration .2s;
+    transition: text-decoration 0.2s;
 
     @media (hover: hover) {
       &:hover {
@@ -80,6 +80,10 @@
     text-align: center;
   }
 
+  @media (max-width: $sm) {
+    padding: 0 15px;
+  }
+
   &__input-inner {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -88,8 +92,6 @@
 
     @media (max-width: $sm) {
       grid-template-columns: repeat(1, 1fr);
-      gap: 3px;
-      margin-bottom: 3px;
     }
   }
 
@@ -100,6 +102,21 @@
     color: var(--color-black-brown);
     border: 1px solid var(--color-black-brown);
 
+    // &:-moz-ui-invalid {
+    //   border: 1px solid var(--color-mandarin-tango);
+    // }
+
+    &:required {
+      // border: 1px solid var(--color-mandarin-tango);
+      box-shadow: none;
+    }
+
+    &:invalid {
+      // color: var(--color-bordeaux);
+      // border: 1px solid var(--color-mandarin-tango);
+      // box-shadow: 0 0 2px 1px rgba(240, 15, 0, 0.75);
+    }
+
     @media (max-width: $sm) {
       max-width: 460px;
     }
@@ -107,7 +124,7 @@
     &::placeholder {
       font-weight: 500;
       color: var(--color-black-brown);
-      opacity: 1;
+      opacity: 0.6;
     }
 
     &:focus {
@@ -117,6 +134,11 @@
       &::placeholder {
         color: var(--color-mandarin-tango);
       }
+
+      &:valid {
+        border: 1px solid var(--color-black-brown);
+        outline: var(--color-black-brown);
+      }
     }
   }
 
@@ -125,13 +147,24 @@
     padding: 12px 14px;
     color: var(--color-black-brown);
     resize: vertical;
-    border: 1px solid var(--color-black-brown);
+    border: 1px solid var(--color-wet-asphalt);
     border-radius: 2px;
+
+    // &:-moz-ui-invalid {
+    //   border: 1px solid var(--color-mandarin-tango);
+    // }
+
+    &:invalid {
+      // color: var(--color-mandarin-tango);
+      box-shadow: none;
+      // border: 1px solid var(--color-mandarin-tango);
+      // box-shadow: 0 0 2px 1px rgba(240, 15, 0, 0.75);
+    }
 
     &::placeholder {
       font-weight: 500;
       color: var(--color-black-brown);
-      opacity: 1;
+      opacity: 0.6;
     }
 
     &:focus {
@@ -140,6 +173,11 @@
 
       &::placeholder {
         color: var(--color-mandarin-tango);
+      }
+
+      &:valid {
+        border: 1px solid var(--color-black-brown);
+        outline: var(--color-black-brown);
       }
     }
   }
@@ -158,9 +196,9 @@
 
     @media (hover: hover) {
       &:hover {
-        color: #b00;
+        color: var(--color-bordeaux);
         background-color: var(--color-white);
-        border: 1px solid #b00;
+        border: 1px solid var(--color-bordeaux);
       }
     }
   }

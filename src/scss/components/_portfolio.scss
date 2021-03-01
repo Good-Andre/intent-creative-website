@@ -3,6 +3,12 @@
     @media (max-width: $sm) {
       padding-bottom: 0;
     }
+
+    &._container {
+      @media (max-width: $sm) {
+        padding-top: 9px;
+      }
+    }
   }
 }
 
@@ -24,7 +30,7 @@
     }
 
     @media (max-width: $sm) {
-      margin-bottom: 22px;
+      margin-bottom: 5px;
     }
   }
 
@@ -68,6 +74,8 @@
 
     @media (max-width: $sm) {
       margin: 0 auto;
+      animation-name: fade-in;
+      animation-duration: 0.7s;
     }
 
     @media (min-width: $sm) {

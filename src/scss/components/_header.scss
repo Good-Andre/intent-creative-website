@@ -21,23 +21,7 @@
     background: var(--color-black-brown) url(../img/top-bar.jpg);
 
     @media (max-width: $sm) {
-      display: none;
-      height: 40px;
-    }
-
-    &._active {
-      position: fixed;
-      top: 253px;
-      right: 0;
-      left: 0;
-      z-index: 20;
-      display: block;
-      background-color: transparent;
-      background-image: none;
-    }
-
-    &._active .header__top-container {
-      justify-content: center;
+      margin-top: 56px;
     }
   }
 
@@ -47,6 +31,7 @@
 
     @media (max-width: $sm) {
       gap: 25px;
+      margin: 0 auto;
     }
   }
 
@@ -71,6 +56,13 @@
 
   &__bottom {
     background-color: var(--color-white);
+
+    @media (max-width: $sm) {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+    }
   }
 
   &__bottom-container {
@@ -96,7 +88,7 @@
   &__logo-i {
     padding: 3px 13.34px;
     margin-right: 9px;
-    color: #fff;
+    color: var(--color-white);
     text-align: center;
     background-color: var(--color-mandarin-tango);
   }
@@ -224,7 +216,9 @@
     position: fixed;
     top: 0;
     left: 0;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.9);
@@ -236,7 +230,7 @@
     flex-direction: column;
     gap: 22px;
     align-items: center;
-    margin-top: 13px;
+    margin-top: -20px;
   }
 
   &._active .nav__link {
